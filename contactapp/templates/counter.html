@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css" class="rel">
+</head>
+<body>
+    <div class="container">
+        <button class="counter-minus" style="height: 30px;margin-top: 20px;">-</button>
+        <p class="counter-display" style="padding: 8px;"">(..)</p>
+        <button class="counter-plus" style="height: 30px;margin-top: 20px;">+</button>
+    </div>
+    <script>
+      let counterDisplayElem = document.querySelector(".counter-display");
+      let counterMinusElem = document.querySelector(".counter-minus");
+      let counterPlusElem = document.querySelector(".counter-plus");
+    
+      let count = 0;
+    
+      updateDisplay();
+    
+      counterPlusElem.addEventListener("click", () => {
+        count++;
+        updateDisplay();
+      });
+    
+      counterMinusElem.addEventListener("click", () => {
+        count--;
+        updateDisplay();
+      });
+    
+      function updateDisplay() {
+        counterDisplayElem.innerHTML = count;
+      }
+    </script>
+    
+</body>
+</html>
+
+
+
+
